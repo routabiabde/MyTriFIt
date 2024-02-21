@@ -2,7 +2,11 @@ package com.example.mytrifit.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import com.example.mytrifit.R
+import com.google.android.youtube.player.YouTubeInitializationResult
+import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerView
 
 class ExerciseDetails : AppCompatActivity(), YouTubePlayer.OnInitializedListener {
@@ -24,10 +28,7 @@ class ExerciseDetails : AppCompatActivity(), YouTubePlayer.OnInitializedListener
     }
 
     override fun onInitializationFailure(provider: YouTubePlayer.Provider, error: YouTubeInitializationResult) {
-        // Handle error
+        // Handle error, such as showing a toast or logging the error message
     }
-}
-
-class YouTubePlayer {
 
 }

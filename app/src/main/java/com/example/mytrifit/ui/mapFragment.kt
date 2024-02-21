@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.mytrifit.Manifest
 import com.example.mytrifit.R
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.location.places.Place
@@ -29,6 +28,7 @@ private const val ARG_PARAM2 = "param2"
 
 class mapFragment : Fragment(), OnMapReadyCallback {
 
+    private val mapView: Any
     private lateinit var googleMap: GoogleMap
     private val PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1
     private val TAG = "mapFragment"
@@ -38,21 +38,23 @@ class mapFragment : Fragment(), OnMapReadyCallback {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_map, container, false)
+        val view = inflater.inflate(R.layout.fragment_map, container, false)
 
-        val mapView: MapView = findViewById(R.id.map_view)
+        val mapView: MapView = view.findViewById(R.id.map_view)
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
 
+        return view
     }
+
 
     override fun onMapReady(googleMap: GoogleMap) {
         this.googleMap = googleMap
         if (ActivityCompat.checkSelfPermission(
-                this,
+                requireActivity(),
                 android.Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
+                requireActivity(),
                 android.Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
@@ -93,24 +95,25 @@ class mapFragment : Fragment(), OnMapReadyCallback {
 
     private fun requestLocationPermission() {
         if (ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_FINE_LOCATION
+                requireActivity(),
+                android.Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
             ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                requireActivity(),
+                arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
                 PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION
             )
         }
+
     }
 
     private fun getNearbyFitnessClubs(location: Location) {
         if (location == null) {
             return
         }
+        val placesClient = Places.createClient(requireActivity())
 
-        val placesClient = Places.createClient(this)
         val placesSearchRequest = FindCurrentPlaceRequest.builder(location)
             .build()
 
@@ -132,6 +135,26 @@ class mapFragment : Fragment(), OnMapReadyCallback {
                     Log.e(TAG, "Place not found: ${exception.statusCode}")
                 }
             }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mapView.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mapView.onPause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mapView.onDestroy()
+    }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+        mapView.onLowMemory()
     }
 
 

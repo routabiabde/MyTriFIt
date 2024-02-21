@@ -53,6 +53,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation("com.google.android.gms:play-services-places:17.0.0")
     implementation("com.google.android.libraries.places:places:3.3.0")
+    implementation("com.google.firebase:firebase-components:17.1.5")
     testImplementation("junit:junit:4.13.2")
     implementation( "androidx.recyclerview:recyclerview:1.3.2")
     // For control over item selection of both touch and mouse driven selection
