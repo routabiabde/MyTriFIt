@@ -25,7 +25,12 @@ class ExercicesActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         val myViewModel:MyViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
 
-        val exerciceAdapter: ExerciseAdapter = ExerciseAdapter(listOf())
+        val exerciceAdapter: ExerciseAdapter = ExerciseAdapter(listOf(),object  : ExerciseAdapter.OnItemClickListener1{
+            override fun onItemClick(exercice: Exercice) {
+                TODO("Not yet implemented")
+            }
+
+        })
 
         myViewModel.getExercicesMutablLiveData().observe(this, Observer {value->
             exerciceAdapter.setExerciceList(value)

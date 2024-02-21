@@ -1,6 +1,9 @@
 package com.example.mytrifit.model
 
 import com.example.mytrifit.R
+import com.example.mytrifit.model.product.CoursProduct
+import com.example.mytrifit.model.product.Product
+import com.example.mytrifit.model.product.foodCompliment
 
 class allDataApp (
     var muscleList:List<Muscle> = mutableListOf(
@@ -63,6 +66,47 @@ class allDataApp (
             ),
         Muscle("CardioVascular",MuscelWorkOutLevel.MedLevel,R.drawable.cardio,true,30),
 
-    )
+    ),
+    var foodComplimentList: MutableList<foodCompliment> = mutableListOf<foodCompliment>(
+        foodCompliment("Protein",30,10,R.drawable.whey),
+        foodCompliment("whey-Protein",30,10,R.drawable.whey),
+        foodCompliment("whey-Protein",30,10,R.drawable.whey),
+        foodCompliment("whey-Protein",30,10,R.drawable.whey),
+        foodCompliment("whey-Protein",30,10,R.drawable.whey),
+        foodCompliment("whey-Protein",30,10,R.drawable.whey),
+        foodCompliment("whey-Protein",30,10,R.drawable.whey),
+    ),
+    var coursProduct: MutableList<CoursProduct> = mutableListOf(
+        CoursProduct("upper-body",40,10,20,R.drawable.chesticon),
+        CoursProduct("upper-body",40,10,20,R.drawable.chesticon),
+        CoursProduct("upper-body",40,10,20,R.drawable.chesticon),
+        CoursProduct("upper-body",40,10,20,R.drawable.chesticon),
+        CoursProduct("upper-body",40,10,20,R.drawable.chesticon),
+        CoursProduct("upper-body",40,10,20,R.drawable.chesticon),
+        CoursProduct("upper-body",40,10,20,R.drawable.chesticon),
+        CoursProduct("upper-body",40,10,20,R.drawable.chesticon),
+    ),
+    var coachingList: MutableList<Exercice> = mutableListOf(
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+        Exercice("abde",4,"06 50 18 13 01",100,R.drawable.profile),
+
+        ),
+
 ){
+
+
+
+
+    companion object{
+          var cartList1:MutableList<Product> = mutableListOf();
+
+    }
+
 }
