@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="215dp">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/back_pic"
+        app:shapeAppearanceOverlay="@style/rounded"
+        android:padding="3dp"
+        app:srcCompat="@drawable/complimants"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        />
+
+
+    <TextView
+        android:id="@+id/work_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="25dp"
+        android:text="Food Supplements"
+        android:textAlignment="center"
+        android:textColor="#D58FE8"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/muscle_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/back_pic"
+        android:layout_alignEnd="@+id/back_pic"
+        android:layout_alignBottom="@+id/back_pic"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="84dp"
+        android:text="You can buy it now !"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/isFullWork"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/back_pic"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="30dp"
+        android:text="Discount now "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/timeWork"
+        android:layout_width="192dp"
+        android:layout_height="34dp"
+        android:layout_alignStart="@+id/muscle_name"
+        android:layout_alignEnd="@+id/muscle_name"
+        android:layout_alignBottom="@+id/muscle_name"
+        android:layout_marginStart="216dp"
+        android:layout_marginEnd="-26dp"
+        android:layout_marginBottom="-127dp"
+        android:text="Total time : 30 min "
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+
+        />
+
+
+</RelativeLayout>
