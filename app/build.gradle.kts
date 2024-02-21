@@ -44,10 +44,13 @@ android {
 
 dependencies {
 
+    implementation ("com.google.android.youtube:youtube-android-player:1.2.2")
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
     testImplementation("junit:junit:4.13.2")
     implementation( "androidx.recyclerview:recyclerview:1.3.2")
     // For control over item selection of both touch and mouse driven selection
