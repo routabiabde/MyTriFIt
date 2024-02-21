@@ -28,7 +28,6 @@ class ExerciseDetails : AppCompatActivity(), YouTubePlayer.OnInitializedListener
     }
 
     override fun onInitializationFailure(provider: YouTubePlayer.Provider, error: YouTubeInitializationResult) {
-        // Handle error, such as showing a toast or logging the error message
     }
 
 }
