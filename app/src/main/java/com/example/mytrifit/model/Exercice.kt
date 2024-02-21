@@ -2,7 +2,9 @@ package com.example.mytrifit.model
 
 class Exercice(
     var nameExer:String,
-    var lengthExer:Int,
-
+    var rating:Int,
+    var rep: String,
+    val numSeri : Int,
+    val logo:Int,
 ) {
 }

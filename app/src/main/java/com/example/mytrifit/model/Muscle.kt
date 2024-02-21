@@ -1,4 +1,8 @@
 package com.example.mytrifit.model
 
-data class Muscle(var nomMuscle:String,var muscelWorkOutLevel: MuscelWorkOutLevel,var isFullWorkOut : Boolean,var time:Int);
+import android.graphics.drawable.Drawable
+
+data class Muscle(var nomMuscle:String,var muscelWorkOutLevel: MuscelWorkOutLevel,
+                  var background:Int,var isFullWorkOut : Boolean,
+                  var time:Int,var listExercice:List<Exercice> = mutableListOf());
 

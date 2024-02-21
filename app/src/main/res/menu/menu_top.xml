@@ -4,11 +4,11 @@
 <item
     android:id="@+id/settings"
     android:icon="@drawable/settings"
-    app:showAsAction="always"
+    app:showAsAction="never"
     android:title="Settings"
     />
 <item
-    app:showAsAction="always"
+    app:showAsAction="never"
     android:id="@+id/notif"
     android:title="notif"
     android:icon="@drawable/notification_important"

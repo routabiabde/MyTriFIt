@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/test01" />
+    android:layout_height="wrap_content"
+
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded"
+         >
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/benchpress"
+        android:layout_gravity="center"
+        android:id="@+id/imgExercice"
+        />
+     <LinearLayout
+         android:layout_width="240dp"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         >
+         <TextView
+             android:id="@+id/nomExercice"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="work Exercices"
+             android:textAlignment="center"
+             android:textSize="30dp"
+             android:padding="5dp"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             />
+         <TextView
+             android:id="@+id/rep"
+                   android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="work Exercices"
+         android:textAlignment="center"
+         android:textSize="20dp"
+         android:padding="3dp"
+         android:textColor="@color/black"
+         android:textStyle=""
+         />
+         <TextView
+             android:id="@+id/sets"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="time"
+             android:layout_gravity="center"
+             android:textAlignment="center"
+             android:textSize="20dp"
+             android:padding="3dp"
+             android:textColor="@color/black"
+
+             />
+     </LinearLayout>
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textStyle=""
+            />
+    </LinearLayout>
+
+
 </LinearLayout>

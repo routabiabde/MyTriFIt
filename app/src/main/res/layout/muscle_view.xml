@@ -11,7 +11,7 @@
         android:id="@+id/back_pic"
         app:shapeAppearanceOverlay="@style/rounded"
         android:padding="5dp"
-        app:srcCompat="@drawable/chestfinl"
+        app:srcCompat="@drawable/cardio"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"

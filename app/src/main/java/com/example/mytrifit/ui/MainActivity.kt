@@ -1,15 +1,11 @@
-package com.example.mytrifit
+package com.example.mytrifit.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
+import com.example.mytrifit.R
 import com.example.mytrifit.databinding.ActivityMainBinding
-import com.example.mytrifit.ui.discountFragment
-import com.example.mytrifit.ui.homeFragment
-import com.example.mytrifit.ui.mapFragment
 import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
